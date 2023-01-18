@@ -1,7 +1,7 @@
 package com.hillel.dzhurynskyi.homework.hm13;
 
 public class ValueCalculator {
-    private int size = 10000000;
+    private static final int size = 10000000;
     private final int halfSize = size / 2;
     private float[] array = new float[size];
 
