@@ -48,7 +48,7 @@ public class ValueCalculator {
     }
 
     public void fillArray() {
-        int element = (int) (Math.random() * 10) + 1;
+        float element = (float) (Math.random() * 10) + 1;
         for (int i = 0; i < size; i++) {
             array[i] = element;
         }
@@ -56,7 +56,7 @@ public class ValueCalculator {
 
     public void operationWithArray(float[] array) {
         for (int i = 0; i < array.length; i++) {
-            array[i] = (float) (array[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
+            array[i] = (float) (array[i] * Math.sin(0.2f + (float) i / 5) * Math.cos(0.2f + (float) i / 5) * Math.cos(0.4f + (float) i / 2));
         }
     }
 }
