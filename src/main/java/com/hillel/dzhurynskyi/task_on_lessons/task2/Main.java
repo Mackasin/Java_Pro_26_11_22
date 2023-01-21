@@ -28,7 +28,7 @@ public class Main {
             counter += futureTask.get();
             System.out.println(j+": " + futureTask.get());
         }
-        System.out.println("totall sum is "+ counter);
+        System.out.println("total sum is "+ counter);
     }
 }
 
