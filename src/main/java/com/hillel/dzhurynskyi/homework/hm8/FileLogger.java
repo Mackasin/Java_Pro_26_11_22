@@ -8,13 +8,13 @@ import java.time.format.DateTimeFormatter;
 
 public class FileLogger implements Logger {
     private final FileLoggerConfiguration config;
-   private LocalDateTime date = LocalDateTime.now();
+    private LocalDateTime date = LocalDateTime.now();
 
     public FileLogger(FileLoggerConfiguration config) {
         this.config = config;
     }
 
-    public void debug(String message){
+    public void debug(String message) {
         checkSize();
         write(LoggingLevel.DEBUG, message, config.getPath());
         info(message);
@@ -27,19 +27,19 @@ public class FileLogger implements Logger {
 
     private void checkSize() {
         File outputFile = new File(config.getPath());
-                if (outputFile.length() >config.getMaxSize()) {
-                        config.setPath("files/"+"Log_" + date.format(DateTimeFormatter.ofPattern("dd_LL_uuuu-HH_mm."))+"txt");
-                    try {
-                        throw  new FileMaxSizeReachedException(String.format("MaxSize: %d, CurrentSize: %d, File: %s",
-                                config.getMaxSize(), outputFile.length(), outputFile.getPath()));
-                    } catch (FileMaxSizeReachedException e) {
-                        System.out.println(e);
-                    }
-                }
+        if (outputFile.length() > config.getMaxSize()) {
+            config.setPath("files/" + "Log_" + date.format(DateTimeFormatter.ofPattern("dd_LL_uuuu-HH_mm.")) + "txt");
+            try {
+                throw new FileMaxSizeReachedException(String.format("MaxSize: %d, CurrentSize: %d, File: %s",
+                        config.getMaxSize(), outputFile.length(), outputFile.getPath()));
+            } catch (FileMaxSizeReachedException e) {
+                System.out.println(e);
+            }
+        }
     }
 
     private void write(LoggingLevel level, String message, String path) {
-        try(FileWriter fw = new FileWriter(path, true)) {
+        try (FileWriter fw = new FileWriter(path, true)) {
             fw.append("[")
                     .append(date.format(DateTimeFormatter.ofPattern("dd_LL_uuuu-HH_mm_ss")))
                     .append("]")
