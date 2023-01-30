@@ -1,0 +1,2 @@
+[30_01_2023-20_06_36][DEBUG]Message:sfdsgf
+[30_01_2023-20_06_36][INFO]Message:sfdsgf

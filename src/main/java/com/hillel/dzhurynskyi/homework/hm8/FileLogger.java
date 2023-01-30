@@ -14,7 +14,7 @@ public class FileLogger implements Logger {
         this.config = config;
     }
 
-    public void debug(String message) {
+    public void debug(String message){
         checkSize();
         write(LoggingLevel.DEBUG, message, config.getPath());
         info(message);
@@ -25,14 +25,17 @@ public class FileLogger implements Logger {
         write(LoggingLevel.INFO, message, config.getPath());
     }
 
-    private boolean checkSize() {
+    private void checkSize() {
         File outputFile = new File(config.getPath());
-        if (outputFile.length() > config.getMaxSize()) {
-            System.out.println("Max size reached!");
-            config.setPath("files/"+"Log_" + date.format(DateTimeFormatter.ofPattern("dd_LL_uuuu-HH_mm."))+"txt");
-            return false;
-        }
-        return true;
+                if (outputFile.length() >config.getMaxSize()) {
+                        config.setPath("files/"+"Log_" + date.format(DateTimeFormatter.ofPattern("dd_LL_uuuu-HH_mm."))+"txt");
+                    try {
+                        throw  new FileMaxSizeReachedException(String.format("MaxSize: %d, CurrentSize: %d, File: %s",
+                                config.getMaxSize(), outputFile.length(), outputFile.getPath()));
+                    } catch (FileMaxSizeReachedException e) {
+                        System.out.println(e);
+                    }
+                }
     }
 
     private void write(LoggingLevel level, String message, String path) {
