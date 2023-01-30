@@ -1,0 +1,9 @@
+[30_01_2023-13_58_07][DEBUG]Message:ggggg
+[30_01_2023-13_58_07][INFO]Message:ggggg
+[30_01_2023-13_58_07][DEBUG]Message:sfdsgf
+[30_01_2023-13_58_07][INFO]Message:sfdsgf
+[30_01_2023-13_58_07][INFO]Message:gdfghfd
+[30_01_2023-13_58_07][DEBUG]Message:sfhjkkfjfhjkgf
+[30_01_2023-13_58_07][INFO]Message:sfhjkkfjfhjkgf
+[30_01_2023-13_58_07][DEBUG]Message:dhsdfgadscs
+[30_01_2023-13_58_07][INFO]Message:dhsdfgadscs
