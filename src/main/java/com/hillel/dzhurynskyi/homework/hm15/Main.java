@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         QuickSort quickSort = new QuickSort();
-        int[] x = { 8, 0, 4, 6, 3, 7, 10, 12, -3 };
+        int[] x = {8, 0, 4, 6, 3, 7, 10, 12, -3};
         System.out.println("Was");
         System.out.println(Arrays.toString(x));
 
@@ -15,8 +15,8 @@ public class Main {
         System.out.println("Became with quick sort");
         System.out.println(Arrays.toString(x));
 
-        int[] a = { 8, 0, 4, 6, 3, 7, 10, 12, -3 };
-        ShakerSort shakerSort=new ShakerSort();
+        int[] a = {8, 0, 4, 6, 3, 7, 10, 12, -3};
+        ShakerSort shakerSort = new ShakerSort();
         shakerSort.sort(a);
 
         System.out.println("Became with shaker sort");
