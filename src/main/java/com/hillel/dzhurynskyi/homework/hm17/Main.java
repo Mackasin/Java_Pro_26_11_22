@@ -22,7 +22,7 @@ public class Main {
         System.out.println("---------------");
         System.out.println(products.lastThreeProducts());
         System.out.println("---------------");
-        System.out.println(products.sum(2019));
+        System.out.println(products.sum(2020));
         System.out.println("---------------");
         System.out.println(products.MapProducts());
     }
