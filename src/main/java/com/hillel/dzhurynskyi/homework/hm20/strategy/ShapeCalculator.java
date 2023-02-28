@@ -6,7 +6,6 @@ public class ShapeCalculator {
     public void setShape(Shape shape) {
         this.shape = shape;
     }
-
     public double calculateArea() {
         return shape.getArea();
     }
