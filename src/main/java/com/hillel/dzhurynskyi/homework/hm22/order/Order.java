@@ -1,12 +1,8 @@
 package com.hillel.dzhurynskyi.homework.hm22.order;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Objects;
 
 public class Order {
-    private static final Logger log = LoggerFactory.getLogger(Order.class.getName());
     private int orderNumber;
     private String nameOfCustomer;
 
