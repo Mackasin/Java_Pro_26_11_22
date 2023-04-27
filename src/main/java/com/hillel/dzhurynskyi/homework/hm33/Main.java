@@ -46,7 +46,7 @@ public class Main {
                         System.out.println("You cart is empty.");
                         break;
                     }
-                    System.out.println("You cart consists the following products:");
+                    System.out.println("You cart consists:");
                     System.out.println(workingCart.getCart());
                     System.out.print("To remove some products, enter product id, to continue, enter 0 (zero): ");
                     if (input.hasNextInt()) {
@@ -58,7 +58,7 @@ public class Main {
                     }
                 }
 
-                System.out.print("To stop making Cart, press N: ");
+                System.out.println("To stop making Cart, press \"N\":");
             } while (!input.hasNext() || (!input.next().equalsIgnoreCase("n")));
             carts.add(workingCart);
         }
