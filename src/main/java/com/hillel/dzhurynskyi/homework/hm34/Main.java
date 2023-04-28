@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         CartDao cartDao = context.getBean(CartDao.class);
         ProductDao productDao = context.getBean(ProductDao.class);
