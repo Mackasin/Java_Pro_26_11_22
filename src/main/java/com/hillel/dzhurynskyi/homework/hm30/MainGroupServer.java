@@ -9,7 +9,7 @@ import org.glassfish.jersey.servlet.ServletContainer;
 public class MainGroupServer {
 
     public static void main(String[] args) throws Exception {
-        ServletContextHandler handler = buildUsingResourceConfig(); // or buildUsingInitParameter()
+        ServletContextHandler handler = buildUsingResourceConfig();
         Server server = new Server(9998);
         server.setHandler(handler);
         try {
